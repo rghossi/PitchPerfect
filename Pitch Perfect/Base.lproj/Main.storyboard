@@ -24,14 +24,37 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQH-vK-0ru">
                                 <rect key="frame" x="141" y="318" width="94" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ptH-bU-oDr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myg-nn-qKO">
+                                <rect key="frame" x="135" y="356" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pip-XX-4Ve">
+                                <rect key="frame" x="136" y="385" width="102" height="30"/>
+                                <state key="normal" title="Stop recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlM-ue-zWx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YQH-vK-0ru" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="745-T1-Rw0"/>
                             <constraint firstItem="YQH-vK-0ru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpQ-Hw-1K6"/>
+                            <constraint firstItem="Pip-XX-4Ve" firstAttribute="top" secondItem="myg-nn-qKO" secondAttribute="bottom" constant="8" id="dLa-vI-lXf"/>
+                            <constraint firstItem="myg-nn-qKO" firstAttribute="centerX" secondItem="YQH-vK-0ru" secondAttribute="centerX" id="jrg-Sb-hhD"/>
+                            <constraint firstItem="Pip-XX-4Ve" firstAttribute="centerX" secondItem="myg-nn-qKO" secondAttribute="centerX" id="xOy-nC-rK4"/>
+                            <constraint firstItem="myg-nn-qKO" firstAttribute="top" secondItem="YQH-vK-0ru" secondAttribute="bottom" constant="8" id="xS0-zk-7Xi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="myg-nn-qKO" id="H3Y-SF-QKL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
